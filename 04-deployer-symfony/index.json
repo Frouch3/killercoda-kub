@@ -14,5 +14,5 @@
     ],
     "finish": {"text": "finish.md"}
   },
-  "backend": {"imageid": "ubuntu:2204"}
+  "backend": {"imageid": "ubuntu"}
 }
