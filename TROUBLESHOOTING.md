@@ -23,6 +23,17 @@ Guide de résolution des problèmes courants sur Killercoda.
 - Amélioration du `foreground.sh` avec spinner et timeout
 - Vérification de l'installation avant de marquer comme prêt
 
+### 3. ❌ "snap: command not found"
+**Statut** : ✅ RÉSOLU
+
+**Problème** : L'image `ubuntu` de Killercoda n'a pas snap préinstallé
+
+**Solution appliquée** :
+- Détection automatique de snap dans `setup.sh`
+- Installation de `snapd` si absent
+- Activation du service snapd
+- Création du symlink `/snap`
+
 ---
 
 ## 🐛 Debugging
@@ -308,6 +319,7 @@ done
 |------|----------|----------|--------|
 | 2024-10-28 | imageId unknown | Changé en `ubuntu` | ✅ Résolu |
 | 2024-10-28 | microk8s not found | Scripts améliorés | ✅ Résolu |
+| 2024-10-28 | snap: command not found | Installation de snapd ajoutée | ✅ Résolu |
 
 ---
 

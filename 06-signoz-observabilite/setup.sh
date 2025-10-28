@@ -6,6 +6,18 @@ exec > >(tee -a $LOGFILE) 2>&1
 
 echo "[$(date)] Démarrage de l'installation de Microk8s..."
 
+# Vérifier et installer snap si nécessaire
+if ! command -v snap &> /dev/null; then
+    echo "[$(date)] snap n'est pas installé, installation en cours..."
+    apt-get update -qq
+    apt-get install -y -qq snapd
+    systemctl enable --now snapd.socket
+    # Attendre que snapd soit prêt
+    sleep 5
+    ln -s /var/lib/snapd/snap /snap 2>/dev/null || true
+    echo "[$(date)] snapd installé avec succès"
+fi
+
 # Installer Microk8s via snap
 echo "[$(date)] Installation de Microk8s via snap..."
 snap install microk8s --classic --channel=1.28/stable
