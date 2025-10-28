@@ -1,0 +1,17 @@
+{
+  "title": "Exercice 5 : Autoscaling avec HPA",
+  "description": "Configurez l'Horizontal Pod Autoscaler pour scaler automatiquement selon la charge",
+  "difficulty": "Intermediate",
+  "time": "30 minutes",
+  "details": {
+    "intro": {"text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh"},
+    "steps": [
+      {"title": "Activer Metrics Server", "text": "step1.md", "verify": "verify-step1.sh"},
+      {"title": "Déployer Application", "text": "step2.md", "verify": "verify-step2.sh"},
+      {"title": "Configurer HPA", "text": "step3.md", "verify": "verify-step3.sh"},
+      {"title": "Générer de la Charge", "text": "step4.md"}
+    ],
+    "finish": {"text": "finish.md"}
+  },
+  "backend": {"imageid": "ubuntu:2204"}
+}

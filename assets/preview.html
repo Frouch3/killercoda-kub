@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniatures Formation Microk8s</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-info {
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .badge-level {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-time {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-intermediate {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            margin-bottom: 60px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-info {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #326CE5;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .download-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .download-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #326CE5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1a4d9f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(50,108,229,0.4);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Miniatures Formation Microk8s</h1>
+        <p class="subtitle">Scénarios interactifs Killercoda • Formation complète Kubernetes</p>
+
+        <!-- Hero Image -->
+        <div class="hero">
+            <img src="00-formation-complete.svg" alt="Formation Complète">
+            <div class="hero-info">
+                <h2 class="hero-title">Formation Microk8s Complète</h2>
+                <p class="hero-desc">
+                    Apprenez Kubernetes de zéro avec 6 exercices pratiques interactifs.<br>
+                    Aucune installation requise • 100% gratuit • Dans votre navigateur
+                </p>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Exercices</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3h30</div>
+                        <div class="stat-label">Formation</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Pratique</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnails Grid -->
+        <div class="grid">
+            <!-- Exercice 1 -->
+            <div class="card">
+                <img src="01-deployer-nginx.svg" alt="Exercice 1">
+                <div class="card-info">
+                    <div class="card-title">Exercice 1 : Déployer Nginx</div>
+                    <div class="card-meta">
+                        <span class="badge badge-level">Débutant</span>
+                        <span class="badge badge-time">30-45 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercice 2 -->
+            <div class="card">
+                <img src="02-exposer-via-ingress.svg" alt="Exercice 2">
+                <div class="card-info">
+                    <div class="card-title">Exercice 2 : Exposer via Ingress</div>
+                    <div class="card-meta">
+                        <span class="badge badge-level">Débutant</span>
+                        <span class="badge badge-time">30 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercice 3 -->
+            <div class="card">
+                <img src="03-ajouter-pvc.svg" alt="Exercice 3">
+                <div class="card-info">
+                    <div class="card-title">Exercice 3 : Stockage Persistant</div>
+                    <div class="card-meta">
+                        <span class="badge badge-level">Débutant</span>
+                        <span class="badge badge-time">30 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercice 4 -->
+            <div class="card">
+                <img src="04-deployer-symfony.svg" alt="Exercice 4">
+                <div class="card-info">
+                    <div class="card-title">Exercice 4 : Symfony + PostgreSQL</div>
+                    <div class="card-meta">
+                        <span class="badge badge-intermediate">Intermédiaire</span>
+                        <span class="badge badge-time">45 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercice 5 -->
+            <div class="card">
+                <img src="05-configurer-hpa.svg" alt="Exercice 5">
+                <div class="card-info">
+                    <div class="card-title">Exercice 5 : Autoscaling (HPA)</div>
+                    <div class="card-meta">
+                        <span class="badge badge-intermediate">Intermédiaire</span>
+                        <span class="badge badge-time">30 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercice 6 -->
+            <div class="card">
+                <img src="06-signoz-observabilite.svg" alt="Exercice 6">
+                <div class="card-info">
+                    <div class="card-title">Exercice 6 : Observabilité Signoz</div>
+                    <div class="card-meta">
+                        <span class="badge badge-intermediate">Intermédiaire</span>
+                        <span class="badge badge-time">40 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h2 class="download-title">📥 Télécharger les Miniatures</h2>
+            <p style="color: #666; margin-bottom: 30px;">
+                Convertissez les fichiers SVG en PNG pour les utiliser sur Killercoda, réseaux sociaux, etc.
+            </p>
+            <div class="download-buttons">
+                <a href="#" class="btn btn-primary" onclick="alert('Exécutez ./convert-to-png.sh dans le terminal'); return false;">
+                    🔄 Convertir en PNG
+                </a>
+                <a href="README.md" class="btn btn-secondary">
+                    📚 Documentation
+                </a>
+            </div>
+            <p style="color: #999; margin-top: 20px; font-size: 14px;">
+                Nécessite ImageMagick ou Inkscape • Voir le README pour les instructions
+            </p>
+        </div>
+    </div>
+</body>
+</html>

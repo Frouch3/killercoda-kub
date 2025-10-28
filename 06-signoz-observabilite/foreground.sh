@@ -1,6 +1,5 @@
 #!/bin/bash
-echo "🎓 Exercice 4 : Symfony + PostgreSQL"
-echo "===================================="
+echo "🎓 Exercice 6 : Signoz Observabilité"
 while [ ! -f /tmp/setup-complete ]; do sleep 2; done
 source /root/.bashrc
 echo "✅ Prêt!"

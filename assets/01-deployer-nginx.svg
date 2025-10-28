@@ -1,0 +1,48 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+
+  <!-- Decorative hexagons (Kubernetes style) -->
+  <polygon points="100,100 150,125 150,175 100,200 50,175 50,125" fill="#ffffff" opacity="0.1"/>
+  <polygon points="1100,450 1150,475 1150,525 1100,550 1050,525 1050,475" fill="#ffffff" opacity="0.1"/>
+  <polygon points="200,500 250,525 250,575 200,600 150,575 150,525" fill="#ffffff" opacity="0.15"/>
+
+  <!-- Main content -->
+  <text x="100" y="200" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#ffffff" opacity="0.3">01</text>
+
+  <text x="100" y="300" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">
+    Exercice 1
+  </text>
+
+  <text x="100" y="370" font-family="Arial, sans-serif" font-size="52" fill="#ffffff">
+    Déployer Nginx
+  </text>
+
+  <!-- Tags -->
+  <rect x="100" y="420" width="180" height="45" rx="22.5" fill="#ffffff" opacity="0.2"/>
+  <text x="190" y="450" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">
+    Débutant
+  </text>
+
+  <rect x="300" y="420" width="150" height="45" rx="22.5" fill="#ffffff" opacity="0.2"/>
+  <text x="375" y="450" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">
+    30-45 min
+  </text>
+
+  <!-- Kubernetes icon (simplified) -->
+  <circle cx="1050" cy="200" r="80" fill="#ffffff" opacity="0.2"/>
+  <text x="1050" y="230" font-family="monospace" font-size="60" fill="#ffffff" text-anchor="middle">☸</text>
+
+  <!-- Footer -->
+  <text x="100" y="590" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" opacity="0.7">
+    Formation Microk8s • Killercoda Interactive
+  </text>
+</svg>

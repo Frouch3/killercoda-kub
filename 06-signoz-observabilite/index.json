@@ -1,0 +1,16 @@
+{
+  "title": "Exercice 6 : Observabilité avec Signoz",
+  "description": "Installez Signoz pour le tracing distribué et l'observabilité complète",
+  "difficulty": "Intermediate",
+  "time": "40 minutes",
+  "details": {
+    "intro": {"text": "intro.md", "background": "setup.sh", "foreground": "foreground.sh"},
+    "steps": [
+      {"title": "Installer Signoz", "text": "step1.md"},
+      {"title": "Déployer Application Instrumentée", "text": "step2.md"},
+      {"title": "Explorer Signoz Dashboard", "text": "step3.md"}
+    ],
+    "finish": {"text": "finish.md"}
+  },
+  "backend": {"imageid": "ubuntu:2204"}
+}
