@@ -1,0 +1,55 @@
+{
+  "title": "Exercice 1 : Déployer Nginx sur Kubernetes",
+  "description": "Apprenez à créer un Deployment, un Service, et à gérer votre première application sur Kubernetes avec Microk8s",
+  "difficulty": "Beginner",
+  "time": "30-45 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Créer le Deployment",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Vérifier les Pods",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Créer le Service",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      },
+      {
+        "title": "Étape 4 : Tester l'Application",
+        "text": "step4.md",
+        "verify": "verify-step4.sh"
+      },
+      {
+        "title": "Étape 5 : Scaler l'Application",
+        "text": "step5.md",
+        "verify": "verify-step5.sh"
+      },
+      {
+        "title": "Étape 6 : Consulter les Logs",
+        "text": "step6.md"
+      },
+      {
+        "title": "Étape 7 : Rolling Update",
+        "text": "step7.md",
+        "verify": "verify-step7.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu:2204"
+  }
+}

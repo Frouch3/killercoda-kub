@@ -1,0 +1,45 @@
+{
+  "title": "Exercice 3 : Stockage Persistant avec PVC",
+  "description": "Apprenez à créer et utiliser des volumes persistants pour sauvegarder les données de vos applications",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Comprendre le Stockage",
+        "text": "step1.md"
+      },
+      {
+        "title": "Étape 2 : Créer un PVC",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Utiliser le PVC dans un Pod",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      },
+      {
+        "title": "Étape 4 : Tester la Persistance",
+        "text": "step4.md",
+        "verify": "verify-step4.sh"
+      },
+      {
+        "title": "Étape 5 : PVC avec Deployment",
+        "text": "step5.md",
+        "verify": "verify-step5.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu:2204"
+  }
+}
