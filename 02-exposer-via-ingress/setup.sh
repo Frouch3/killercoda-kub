@@ -18,6 +18,11 @@ if ! command -v snap &> /dev/null; then
     echo "[$(date)] snapd installé avec succès"
 fi
 
+
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
+echo "[$(date)] PATH configuré: $PATH"
+
 # Installer Microk8s via snap
 echo "[$(date)] Installation de Microk8s via snap..."
 snap install microk8s --classic --channel=1.28/stable
