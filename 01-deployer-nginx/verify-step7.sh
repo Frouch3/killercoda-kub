@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
+
 # Vérifier que le deployment a au moins 2 révisions dans l'historique
 REVISION_COUNT=$(microk8s kubectl rollout history deployment/nginx-deployment --no-headers 2>/dev/null | wc -l)
 

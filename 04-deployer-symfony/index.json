@@ -1,5 +1,6 @@
 {
   "title": "Exercice 4 : Déployer Symfony avec PostgreSQL",
+  "image": "04-deployer-symfony.png",
   "description": "Déployez une application Symfony complète avec base de données, migrations et Ingress",
   "difficulty": "Intermediate",
   "time": "45 minutes",

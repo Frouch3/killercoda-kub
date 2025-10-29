@@ -1,5 +1,6 @@
 {
   "title": "Exercice 3 : Stockage Persistant avec PVC",
+  "image": "03-ajouter-pvc.png",
   "description": "Apprenez à créer et utiliser des volumes persistants pour sauvegarder les données de vos applications",
   "difficulty": "Beginner",
   "time": "30 minutes",

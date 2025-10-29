@@ -1,5 +1,6 @@
 {
   "title": "Exercice 1 : Déployer Nginx sur Kubernetes",
+  "image": "01-deployer-nginx.png",
   "description": "Apprenez à créer un Deployment, un Service, et à gérer votre première application sur Kubernetes avec Microk8s",
   "difficulty": "Beginner",
   "time": "30-45 minutes",

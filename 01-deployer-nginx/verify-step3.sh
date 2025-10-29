@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
+
 # Vérifier que le service existe
 if ! microk8s kubectl get svc nginx-service >/dev/null 2>&1; then
   echo "❌ Le service 'nginx-service' n'existe pas."

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
 # Vérifier que l'addon ingress est activé
 if ! microk8s status | grep -q "ingress: enabled"; then
   echo "❌ L'addon ingress n'est pas activé"

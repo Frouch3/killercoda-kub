@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
+
 # Vérifier le nombre de replicas configurés
 DESIRED_REPLICAS=$(microk8s kubectl get deployment nginx-deployment -o jsonpath='{.spec.replicas}' 2>/dev/null)
 

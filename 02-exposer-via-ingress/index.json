@@ -1,5 +1,6 @@
 {
   "title": "Exercice 2 : Exposer via Ingress",
+  "image": "02-exposer-via-ingress.png",
   "description": "Apprenez à exposer votre application avec un Ingress Controller et configurer des routes HTTP",
   "difficulty": "Beginner",
   "time": "30 minutes",

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
+
 # Vérifier que le service répond
 SERVICE_IP=$(microk8s kubectl get svc nginx-service -o jsonpath='{.spec.clusterIP}' 2>/dev/null)
 

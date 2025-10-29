@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
 # Vérifier que l'API est déployée
 if ! microk8s kubectl get deployment api-app >/dev/null 2>&1; then
   echo "❌ Le deployment 'api-app' n'existe pas"

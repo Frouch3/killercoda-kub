@@ -1,5 +1,8 @@
 #!/bin/bash
 if ! microk8s kubectl get pod writer-pod >/dev/null 2>&1; then
+
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
   echo "❌ Le pod 'writer-pod' n'existe pas"
   exit 1
 fi

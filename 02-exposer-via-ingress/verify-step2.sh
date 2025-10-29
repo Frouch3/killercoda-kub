@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
 # Vérifier que le deployment existe
 if ! microk8s kubectl get deployment web-app >/dev/null 2>&1; then
   echo "❌ Le deployment 'web-app' n'existe pas"

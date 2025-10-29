@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
+
 # Vérifier qu'il y a bien 2 pods
 POD_COUNT=$(microk8s kubectl get pods -l app=nginx --no-headers 2>/dev/null | wc -l)
 

@@ -1,5 +1,6 @@
 {
   "title": "Exercice 5 : Autoscaling avec HPA",
+  "image": "05-configurer-hpa.png",
   "description": "Configurez l'Horizontal Pod Autoscaler pour scaler automatiquement selon la charge",
   "difficulty": "Intermediate",
   "time": "30 minutes",

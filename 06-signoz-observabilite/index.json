@@ -1,5 +1,6 @@
 {
   "title": "Exercice 6 : Observabilité avec Signoz",
+  "image": "06-signoz-observabilite.png",
   "description": "Installez Signoz pour le tracing distribué et l'observabilité complète",
   "difficulty": "Intermediate",
   "time": "40 minutes",

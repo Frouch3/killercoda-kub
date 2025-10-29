@@ -4,14 +4,14 @@ echo "🎓 Formation Microk8s - Exercice 3"
 echo "=================================="
 echo ""
 echo "⏳ Préparation de l'environnement en cours..."
-echo "   Installation de Microk8s (environ 1-2 minutes)"
+echo "   Installation de Microk8s (environ 3-5 minutes)"
 echo ""
 
 # Afficher un spinner pendant l'attente
 spin='-\|/'
 i=0
 elapsed=0
-max_wait=180  # 3 minutes maximum
+max_wait=420  # 7 minutes maximum (snapd + microk8s + addons)
 
 while [ ! -f /tmp/setup-complete ]; do
     i=$(( (i+1) %4 ))

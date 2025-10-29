@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# Ajouter /snap/bin au PATH
+export PATH=$PATH:/snap/bin
 # Vérifier que l'Ingress existe
 if ! microk8s kubectl get ingress web-ingress >/dev/null 2>&1; then
   echo "❌ L'Ingress 'web-ingress' n'existe pas"
