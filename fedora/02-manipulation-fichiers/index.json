@@ -1,8 +1,8 @@
 {
-  "title": "Premiers pas avec Fedora Linux",
-  "description": "Découvrez les bases de la navigation dans le système de fichiers Linux et l'arborescence système",
+  "title": "Manipulation de fichiers sous Fedora",
+  "description": "Apprenez à créer, copier, déplacer, afficher et supprimer des fichiers en ligne de commande",
   "difficulty": "Beginner",
-  "time": "20-30 minutes",
+  "time": "25-35 minutes",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -11,27 +11,27 @@
     },
     "steps": [
       {
-        "title": "Étape 1 : Se repérer dans le système",
+        "title": "Étape 1 : Créer des fichiers",
         "text": "step1.md",
         "verify": "verify-step1.sh"
       },
       {
-        "title": "Étape 2 : Explorer l'arborescence Linux",
+        "title": "Étape 2 : Afficher le contenu des fichiers",
         "text": "step2.md",
         "verify": "verify-step2.sh"
       },
       {
-        "title": "Étape 3 : Créer des dossiers",
+        "title": "Étape 3 : Copier des fichiers",
         "text": "step3.md",
         "verify": "verify-step3.sh"
       },
       {
-        "title": "Étape 4 : Naviguer entre les dossiers",
+        "title": "Étape 4 : Déplacer et renommer des fichiers",
         "text": "step4.md",
         "verify": "verify-step4.sh"
       },
       {
-        "title": "Étape 5 : Supprimer des dossiers",
+        "title": "Étape 5 : Supprimer des fichiers",
         "text": "step5.md",
         "verify": "verify-step5.sh"
       }
