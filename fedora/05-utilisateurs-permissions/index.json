@@ -1,0 +1,46 @@
+{
+  "title": "Utilisateurs et permissions sous Linux",
+  "description": "Apprenez à gérer les utilisateurs, les groupes et les permissions de fichiers sous Linux",
+  "difficulty": "Beginner",
+  "time": "35-45 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Créer et gérer des utilisateurs",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Comprendre les permissions de fichiers",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Modifier les permissions avec chmod",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      },
+      {
+        "title": "Étape 4 : Gérer les groupes et propriétaires",
+        "text": "step4.md",
+        "verify": "verify-step4.sh"
+      },
+      {
+        "title": "Étape 5 : Utiliser sudo et sécurité de base",
+        "text": "step5.md",
+        "verify": "verify-step5.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
