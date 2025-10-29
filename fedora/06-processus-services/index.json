@@ -1,5 +1,5 @@
 {
-  "title": "Gestion des processus et services sous Linux",
+  "title": "6. Processus et services",
   "description": "Apprenez à gérer les processus en cours d'exécution et les services système avec systemctl",
   "difficulty": "Beginner",
   "time": "35-45 minutes",
