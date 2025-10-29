@@ -104,7 +104,7 @@ Cette méthode force vraiment l'ordre et verrouille les scénarios suivants.
 
 ---
 
-## 🔧 Méthode 2 : Via l'organisation GitHub
+## 🔧 Méthode 2 : Via GitHub Integration + Numérotation
 
 Si vous utilisez l'intégration GitHub avec Killercoda :
 
@@ -112,27 +112,20 @@ Si vous utilisez l'intégration GitHub avec Killercoda :
    ```
    votre-repo/
    └── fedora/
-       ├── structure.json          ← Définit le parcours
        ├── README.md
-       ├── 01-premiers-pas/
+       ├── 01-premiers-pas/        ← index.json avec title "1. ..."
        ├── 02-manipulation-fichiers/
        ├── ... (8 scénarios)
        └── 08-scripts-automatisation/
    ```
 
-2. **Le fichier structure.json**
+2. **Les titres numérotés** (déjà fait ✅)
 
-   Ce fichier (déjà créé) définit l'ordre :
+   Chaque `index.json` a un titre numéroté :
    ```json
    {
-     "title": "Formation Linux - De débutant à intermédiaire",
-     "details": {
-       "steps": [
-         {"title": "1. Premiers pas", "text": "01-premiers-pas"},
-         {"title": "2. Manipulation fichiers", "text": "02-manipulation-fichiers"},
-         ...
-       ]
-     }
+     "title": "1. Premiers pas avec Fedora Linux",
+     ...
    }
    ```
 
@@ -140,7 +133,9 @@ Si vous utilisez l'intégration GitHub avec Killercoda :
    - Dans Killercoda → Settings → GitHub Integration
    - Sélectionner le repo
    - Path: `fedora/`
-   - Killercoda détectera automatiquement `structure.json`
+   - Killercoda détectera automatiquement les scénarios et les affichera dans l'ordre numérique
+
+⚠️ **Note** : Ne PAS créer de fichier `structure.json` car cela empêche l'affichage des scénarios individuels
 
 ---
 
