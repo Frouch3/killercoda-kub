@@ -6,36 +6,39 @@ echo ""
 echo "⏳ Préparation de l'environnement en cours..."
 echo "   Installation de Microk8s (environ 3-5 minutes)"
 echo ""
+echo "📋 Logs d'installation :"
+echo "─────────────────────────────────────────────────────────"
+echo ""
 
-# Afficher un spinner pendant l'attente
-spin='-\|/'
-i=0
+# Suivre les logs d'installation en temps réel
+tail -f /tmp/setup.log 2>/dev/null &
+TAIL_PID=$!
+
+# Attendre que le setup soit terminé (max 420s)
 elapsed=0
-max_wait=420  # 7 minutes maximum (snapd + microk8s + addons)
+max_wait=420
 
 while [ ! -f /tmp/setup-complete ]; do
-    i=$(( (i+1) %4 ))
-    printf "\r   ${spin:$i:1} Installation en cours... (${elapsed}s) "
     sleep 2
     elapsed=$((elapsed + 2))
 
     # Timeout de sécurité
     if [ $elapsed -ge $max_wait ]; then
         echo ""
+        echo "⚠️  L'installation prend plus de temps que prévu (${elapsed}s)"
         echo ""
-        echo "⚠️  L'installation prend plus de temps que prévu"
-        echo ""
-        echo "📋 Logs d'installation disponibles :"
-        echo "   tail -f /tmp/setup.log"
-        echo ""
-        echo "🔧 Vous pouvez aussi installer manuellement :"
+        echo "🔧 Vous pouvez installer manuellement :"
         echo "   snap install microk8s --classic"
         echo ""
         break
     fi
 done
 
+# Tuer le tail
+kill $TAIL_PID 2>/dev/null || true
+
 echo ""
+echo "─────────────────────────────────────────────────────────"
 echo ""
 
 # Vérifier si l'installation a réussi
