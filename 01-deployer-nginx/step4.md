@@ -35,20 +35,26 @@ Vous devriez voir le **code HTML** de la page d'accueil de Nginx ! 🎉
 
 ## 📊 Tester le Load-Balancing
 
-Le Service fait automatiquement du load-balancing entre les 2 pods. Pour le voir en action, on va :
+Le Service fait automatiquement du load-balancing entre les 2 pods. L'image `nginxdemos/hello` affiche le nom du pod qui répond à chaque requête !
 
-1. **Récupérer les noms des 2 pods** :
-```bash
-microk8s kubectl get pods -l app=nginx -o name
-```{{exec}}
-
-2. **Envoyer plusieurs requêtes** et voir quel pod répond :
+**Envoyer plusieurs requêtes** et voir quel pod répond :
 ```bash
 for i in {1..10}; do
-  echo "Requête $i :"
-  curl -s http://localhost:8080 | grep -i "welcome"
+  echo "=== Requête $i ==="
+  curl -s http://localhost:8080 | grep "Server name:"
+  sleep 0.5
 done
 ```{{exec}}
+
+Vous verrez alterner entre les 2 pods différents ! Par exemple :
+```
+Server name: nginx-deployment-xxxxx-aaaaa
+Server name: nginx-deployment-xxxxx-bbbbb
+Server name: nginx-deployment-xxxxx-aaaaa
+...
+```
+
+C'est le Service qui fait automatiquement du **round-robin** entre les pods.
 
 ## 🔍 Surveiller les Logs en Temps Réel
 
@@ -64,16 +70,17 @@ microk8s kubectl logs -f $POD_NAME
 
 Laissez tourner quelques secondes, puis appuyez sur **Ctrl+C** pour arrêter.
 
-## 🧪 Test Avancé : Vérifier les Headers HTTP
+## 🧪 Voir la Page Complète
 
 ```bash
-curl -I http://localhost:8080
+curl http://localhost:8080
 ```{{exec}}
 
-Vous verrez :
-- **HTTP/1.1 200 OK** : La requête a réussi
-- **Server: nginx/1.25.x** : La version de Nginx
-- **Content-Type: text/html** : Type de contenu
+Vous verrez une page HTML avec :
+- **Server address** : L'IP interne du pod
+- **Server name** : Le nom du pod (hostname)
+- **Date** : La date/heure de la requête
+- **Request URI** : L'URL demandée
 
 ## 🛑 Arrêter le Port-Forward
 

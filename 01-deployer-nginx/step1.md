@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.25-alpine
+        image: nginxdemos/hello
         ports:
         - containerPort: 80
 EOF
@@ -49,7 +49,7 @@ EOF
 - **`replicas: 2`** : Nombre de pods à créer (haute disponibilité)
 - **`selector.matchLabels`** : Comment le Deployment trouve ses pods
 - **`template`** : Modèle de pod à créer
-- **`image: nginx:1.25-alpine`** : Image Docker à utiliser (version Alpine légère)
+- **`image: nginxdemos/hello`** : Image Docker à utiliser (affiche le nom du pod pour démonstration)
 - **`containerPort: 80`** : Port sur lequel le conteneur écoute
 
 ## ✅ Vérification

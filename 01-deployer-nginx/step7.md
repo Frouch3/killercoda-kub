@@ -23,14 +23,14 @@ strategy:
     maxSurge: 25%        # Max 25% de pods supplémentaires créés temporairement
 ```
 
-## 🚀 Mettre à Jour la Version de Nginx
+## 🚀 Mettre à Jour la Version de l'Application
 
-Nous allons passer de **nginx:1.25-alpine** à **nginx:1.26-alpine**.
+Nous allons passer de **nginxdemos/hello** (version HTML) à **nginxdemos/hello:plain-text** (version texte simple).
 
 ### Méthode 1 : Via `kubectl set image`
 
 ```bash
-microk8s kubectl set image deployment/nginx-deployment nginx=nginx:1.26-alpine
+microk8s kubectl set image deployment/nginx-deployment nginx=nginxdemos/hello:plain-text
 ```{{exec}}
 
 Cette commande :
@@ -46,7 +46,7 @@ watch -n 1 'microk8s kubectl get pods -l app=nginx'
 ```{{exec}}
 
 Vous verrez :
-1. Nouveaux pods créés avec la nouvelle image (nginx:1.26)
+1. Nouveaux pods créés avec la nouvelle image (nginxdemos/hello:plain-text)
 2. Anciens pods terminés progressivement
 3. À aucun moment tous les pods ne sont down
 
@@ -69,7 +69,7 @@ microk8s kubectl get deployment nginx-deployment -o jsonpath='{.spec.template.sp
 echo ""
 ```{{exec}}
 
-Vous devriez voir : `nginx:1.26-alpine`
+Vous devriez voir : `nginxdemos/hello:plain-text`
 
 ## 📜 Voir l'Historique des Déploiements
 
@@ -80,8 +80,8 @@ microk8s kubectl rollout history deployment/nginx-deployment
 ```{{exec}}
 
 Vous verrez :
-- **REVISION 1** : Déploiement initial (nginx:1.25)
-- **REVISION 2** : Mise à jour (nginx:1.26)
+- **REVISION 1** : Déploiement initial (nginxdemos/hello)
+- **REVISION 2** : Mise à jour (nginxdemos/hello:plain-text)
 
 ## 🔍 Détails d'une Révision
 
@@ -109,7 +109,7 @@ Cette commande :
 watch -n 1 'microk8s kubectl get pods -l app=nginx'
 ```{{exec}}
 
-Vous verrez les pods revenir à nginx:1.25-alpine !
+Vous verrez les pods revenir à nginxdemos/hello (version HTML) !
 
 Appuyez sur **Ctrl+C** après quelques secondes.
 
@@ -120,7 +120,7 @@ microk8s kubectl get deployment nginx-deployment -o jsonpath='{.spec.template.sp
 echo ""
 ```{{exec}}
 
-Devrait afficher : `nginx:1.25-alpine`
+Devrait afficher : `nginxdemos/hello`
 
 ## 🎯 Rollback vers une Révision Spécifique
 
@@ -136,8 +136,8 @@ microk8s kubectl rollout undo deployment/nginx-deployment --to-revision=2
 Vous pouvez aussi modifier le fichier YAML directement :
 
 ```bash
-# Éditer le fichier
-sed -i 's/nginx:1.25-alpine/nginx:1.26-alpine/g' nginx-deployment.yaml
+# Éditer le fichier (remplacer l'image)
+sed -i 's|nginxdemos/hello$|nginxdemos/hello:plain-text|g' nginx-deployment.yaml
 
 # Vérifier la modification
 grep "image:" nginx-deployment.yaml

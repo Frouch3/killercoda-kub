@@ -19,8 +19,8 @@ fi
 
 # Vérifier l'image
 IMAGE=$(microk8s kubectl get deployment nginx-deployment -o jsonpath='{.spec.template.spec.containers[0].image}')
-if [[ ! "$IMAGE" =~ nginx:1.25 ]]; then
-  echo "❌ L'image doit être nginx:1.25-alpine (actuellement: $IMAGE)"
+if [[ ! "$IMAGE" =~ nginxdemos/hello ]]; then
+  echo "❌ L'image doit être nginxdemos/hello (actuellement: $IMAGE)"
   exit 1
 fi
 
