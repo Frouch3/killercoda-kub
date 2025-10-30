@@ -1,0 +1,13 @@
+# Mapping ancien → nouveau
+01-deployer-nginx → 01-deployer-nginx
+07-configmaps-secrets → 02-configmaps-secrets
+08-health-checks → 03-health-checks
+02-exposer-via-ingress → 04-exposer-via-ingress
+03-ajouter-pvc → 05-ajouter-pvc
+09-resource-limits → 06-resource-limits
+05-configurer-hpa → 07-configurer-hpa
+10-statefulsets → 08-statefulsets
+11-jobs-cronjobs → 09-jobs-cronjobs
+04-deployer-symfony → 10-deployer-symfony
+12-troubleshooting → 11-troubleshooting
+06-signoz-observabilite → 12-signoz-observabilite

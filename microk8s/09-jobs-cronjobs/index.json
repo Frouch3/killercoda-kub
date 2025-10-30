@@ -1,0 +1,36 @@
+{
+  "title": "Exercice 8 : Jobs et CronJobs",
+  "description": "Apprenez à exécuter des tâches batch et planifiées avec Jobs et CronJobs",
+  "difficulty": "Intermediate",
+  "time": "25 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Créer un Job Simple",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Jobs Parallèles",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : CronJobs (Tâches Planifiées)",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

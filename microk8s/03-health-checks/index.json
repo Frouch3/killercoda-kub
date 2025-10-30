@@ -1,0 +1,41 @@
+{
+  "title": "Exercice 3.5 : Health Checks et Probes",
+  "description": "Apprenez à configurer les Liveness, Readiness et Startup Probes pour des applications résilientes",
+  "difficulty": "Beginner",
+  "time": "30 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Liveness Probe - Auto-Healing",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Readiness Probe - Gestion du Trafic",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Startup Probe - Applications Lentes",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      },
+      {
+        "title": "Étape 4 : Simuler des Défaillances",
+        "text": "step4.md",
+        "verify": "verify-step4.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

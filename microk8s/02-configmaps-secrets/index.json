@@ -1,0 +1,46 @@
+{
+  "title": "Exercice 2.5 : ConfigMaps et Secrets",
+  "description": "Apprenez à gérer la configuration et les données sensibles avec ConfigMaps et Secrets",
+  "difficulty": "Beginner",
+  "time": "25 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Créer un ConfigMap",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Créer un Secret",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Utiliser comme Variables d'Environnement",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      },
+      {
+        "title": "Étape 4 : Monter ConfigMap comme Volume",
+        "text": "step4.md",
+        "verify": "verify-step4.sh"
+      },
+      {
+        "title": "Étape 5 : Monter Secret comme Volume",
+        "text": "step5.md",
+        "verify": "verify-step5.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

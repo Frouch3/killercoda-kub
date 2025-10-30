@@ -1,0 +1,36 @@
+{
+  "title": "Exercice 4.5 : Resource Limits et QoS",
+  "description": "Apprenez à gérer les ressources CPU et RAM avec requests et limits",
+  "difficulty": "Beginner",
+  "time": "25 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Comprendre Requests et Limits",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Quality of Service (QoS)",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Simuler OOMKilled",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

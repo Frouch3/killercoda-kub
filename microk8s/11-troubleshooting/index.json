@@ -1,0 +1,46 @@
+{
+  "title": "Exercice 10 : Troubleshooting et Debugging",
+  "description": "Apprenez à diagnostiquer et résoudre les problèmes courants dans Kubernetes",
+  "difficulty": "Intermediate",
+  "time": "40 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : CrashLoopBackOff",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : ImagePullBackOff",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Pod Pending (Resources)",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      },
+      {
+        "title": "Étape 4 : Problèmes Réseau et DNS",
+        "text": "step4.md",
+        "verify": "verify-step4.sh"
+      },
+      {
+        "title": "Étape 5 : Init Container Échoue",
+        "text": "step5.md",
+        "verify": "verify-step5.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

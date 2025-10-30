@@ -1,0 +1,36 @@
+{
+  "title": "Exercice 5.5 : StatefulSets et PostgreSQL",
+  "description": "Apprenez la différence entre Deployment et StatefulSet, déployez PostgreSQL avec stockage persistant",
+  "difficulty": "Intermediate",
+  "time": "35 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Étape 1 : Différence Deployment vs StatefulSet",
+        "text": "step1.md",
+        "verify": "verify-step1.sh"
+      },
+      {
+        "title": "Étape 2 : Déployer PostgreSQL avec StatefulSet",
+        "text": "step2.md",
+        "verify": "verify-step2.sh"
+      },
+      {
+        "title": "Étape 3 : Tester Persistance et Ordre",
+        "text": "step3.md",
+        "verify": "verify-step3.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
